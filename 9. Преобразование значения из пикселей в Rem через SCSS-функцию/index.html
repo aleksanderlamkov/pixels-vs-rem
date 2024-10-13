@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../globals.css" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Преобразование значения из пикселей в Rem через SCSS-функцию</title>
+</head>
+<body>
+  <div class="box">
+    Стили этого элемента:
+    <pre>
+width: rem(400);        // 600px => 37.5rem
+height: rem(250);       // 280px => 17.5rem
+padding: rem(40);       // 40px  => 2.5rem
+border-radius: rem(15); // 15px  => 0.9375rem
+box-shadow:
+  rem(6)                // 6px   => 0.375rem
+  rem(6)                // 6px   => 0.375rem
+  rem(10) deeppink;     // 10px  => 0.625rem
+
+/* 768px => 48rem */
+@media (width < rem(768)) {
+  padding: rem(20);     // 20px  => 1.25rem
+  font-size: rem(14);   // 14px  => 0.875rem
+}
+    </pre>
+  </div>
+</body>
+</html>

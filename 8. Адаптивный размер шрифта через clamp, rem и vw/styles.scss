@@ -1,0 +1,28 @@
+@use 'sass:math';
+
+@mixin fluid-text($max: 48, $min: 16) {
+  $maxViewportWidth: 1400;
+  $minViewportWidth: 360;
+
+  $maxSize: math.div($max, 16);
+  $minSize: math.div($min, 16);
+  $maxWidth: math.div($maxViewportWidth, 16);
+  $minWidth: math.div($minViewportWidth, 16);
+
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $yAxisIntersection: -$minWidth * $slope + $minSize;
+
+  font-size: clamp(
+    #{$minSize * 1rem},
+    #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+    #{$maxSize * 1rem}
+  );
+}
+
+h1 { @include fluid-text(40, 28) }
+h2 { @include fluid-text(36, 26) }
+h3 { @include fluid-text(32, 24) }
+h4 { @include fluid-text(28, 22) }
+h5 { @include fluid-text(24, 20) }
+h6 { @include fluid-text(20, 18) }
+body { @include fluid-text(18, 16) }

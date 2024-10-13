@@ -1,0 +1,16 @@
+.box {
+  width: 25rem;
+  height: 15.625rem;
+  padding: 2.5rem;
+  border-radius: 0.9375rem;
+  box-shadow: 0.375rem 0.375rem 0.625rem deeppink;
+  /* 768px => 48rem */
+}
+@media (width < 48rem) {
+  .box {
+    padding: 1.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

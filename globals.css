@@ -1,0 +1,19 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  color: royalblue;
+  background-color: peachpuff;
+}
+
+aside {
+  background-color: lightsalmon;
+}
+
+main,
+.box {
+  background-color: aliceblue;
+}
+
+b,
+pre {
+  color: mediumvioletred;
+}

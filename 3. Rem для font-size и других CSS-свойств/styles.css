@@ -1,0 +1,12 @@
+main {
+  font-size: 1.5rem;        /* 24px */
+
+  padding: 1.875rem;        /* 30px */
+  border-radius: 1.875rem;  /* 30px */
+}
+
+@media (width < 1000px) {
+  main {
+    font-size: 1rem;        /* 16px */
+  }
+}
